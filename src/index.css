@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Public Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-scale: 1;
+
+  --muni-purple: #3B1E6D;
+  --muni-purple-dark: #2A1252;
+  --muni-violet: #6D28D9;
+  --muni-lavender: #EDE9FE;
+  --muni-emerald: #1E8449;
+  --muni-emerald-hover: #176B3A;
+  --muni-bg: #FFFFFF;
+  --muni-surface: #F4F6F9;
+  --muni-text: #1A2332;
+  --muni-muted: #4A5568;
+  --muni-border: #DDE3EA;
+}
+
+html {
+  font-size: calc(16px * var(--font-scale));
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--muni-bg);
+  color: var(--muni-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* High Contrast Mode for WCAG 2.1 AA/AAA Accessibility */
+html.high-contrast {
+  --muni-bg: #000000;
+  --muni-surface: #121212;
+  --muni-text: #FFFFFF;
+  --muni-muted: #E2E8F0;
+  --muni-border: #FFD400;
+  --muni-purple: #000000;
+  --muni-violet: #C4B5FD;
+  --muni-emerald: #22C55E;
+}
+
+html.high-contrast body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+html.high-contrast .hc-surface {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+  border-color: #FFD400 !important;
+}
+
+html.high-contrast .hc-card {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFD400 !important;
+}
+
+html.high-contrast .hc-text {
+  color: #FFFFFF !important;
+}
+
+html.high-contrast .hc-muted {
+  color: #E2E8F0 !important;
+}
+
+html.high-contrast .hc-link {
+  color: #FFD400 !important;
+  text-decoration: underline;
+}
+
+html.high-contrast .hc-btn-primary {
+  background-color: #FFD400 !important;
+  color: #000000 !important;
+  border: 2px solid #FFFFFF !important;
+}
+
+/* Accessible focus outlines */
+:focus-visible {
+  outline: 3px solid #6D28D9;
+  outline-offset: 2px;
+}
+
+html.high-contrast :focus-visible {
+  outline: 3px solid #FFD400;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

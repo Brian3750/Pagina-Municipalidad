@@ -1,0 +1,6 @@
+{
+  "name": "Ilustre Municipalidad de Conchalí — Portal Ciudadano",
+  "description": "Portal institucional, trámites en línea, Oficina de Partes Digital (OPIR), agenda comunitaria y servicios municipales de la Ilustre Municipalidad de Conchalí, Chile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
