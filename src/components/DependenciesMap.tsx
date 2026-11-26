@@ -36,10 +36,10 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
       <div className="max-w-[1280px] mx-auto px-4 lg:px-6">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold text-[#6D28D9] mb-1.5">
+            <p className="text-sm font-semibold text-[#7A48A0] mb-1.5">
               Atención Presencial en Territorio
             </p>
-            <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#3B1E6D] hc-text text-balance">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#662D91] hc-text text-balance">
               Mapa de Dependencias Municipales y Horarios de Atención
             </h2>
             <p className="text-base text-[#4A5568] hc-muted mt-2">
@@ -70,8 +70,8 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                   }}
                   className={`px-3 py-2 rounded-md text-xs sm:text-sm font-semibold transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
                     active
-                      ? 'bg-[#3B1E6D] text-white hc-btn-primary'
-                      : 'text-[#4A5568] hc-muted hover:text-[#3B1E6D] hover:bg-[#F4F6F9]'
+                      ? 'bg-[#662D91] text-white hc-btn-primary'
+                      : 'text-[#4A5568] hc-muted hover:text-[#662D91] hover:bg-[#F4F6F9]'
                   }`}
                 >
                   {tab.label}
@@ -86,19 +86,19 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
           <div className="lg:col-span-7 bg-white hc-card rounded-xl border border-[#DDE3EA] p-4 sm:p-6 flex flex-col justify-between">
             <div className="flex items-center justify-between gap-2 pb-3 mb-4 border-b border-[#DDE3EA]">
               <div>
-                <h3 className="font-display font-bold text-base text-[#3B1E6D] hc-text">
+                <h3 className="font-display font-bold text-base text-[#662D91] hc-text">
                   Plano Comunal de Conchalí — Ejes Principales
                 </h3>
                 <p className="text-xs text-[#4A5568] hc-muted">
                   Haz clic en un marcador numerado para ver los detalles de la sede
                 </p>
               </div>
-              <span className="text-xs font-mono-tabular font-semibold text-[#3B1E6D] hc-text">
+              <span className="text-xs font-mono-tabular font-semibold text-[#662D91] hc-text">
                 Región Metropolitana
               </span>
             </div>
 
-            <div className="relative w-full aspect-[16/10] bg-[#EDE9FE] rounded-lg border border-[#CBD5E1] overflow-hidden">
+            <div className="relative w-full aspect-[16/10] bg-[#F2ECF6] rounded-lg border border-[#CBD5E1] overflow-hidden">
               {/* Plano vial vectorial realista de ejes de Conchalí */}
               <svg
                 viewBox="0 0 800 500"
@@ -132,11 +132,11 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 </text>
 
                 {/* Eje Av. Independencia */}
-                <path d="M 380 0 L 380 500" stroke="#3B1E6D" strokeOpacity="0.22" strokeWidth="14" />
+                <path d="M 380 0 L 380 500" stroke="#662D91" strokeOpacity="0.22" strokeWidth="14" />
                 <text
                   x="394"
                   y="475"
-                  fill="#3B1E6D"
+                  fill="#662D91"
                   fontSize="13"
                   fontWeight="700"
                 >
@@ -144,8 +144,8 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 </text>
 
                 {/* Eje Av. Dorsal */}
-                <path d="M 0 285 L 800 285" stroke="#6D28D9" strokeOpacity="0.24" strokeWidth="12" />
-                <text x="24" y="272" fill="#3B1E6D" fontSize="13" fontWeight="700">
+                <path d="M 0 285 L 800 285" stroke="#7A48A0" strokeOpacity="0.24" strokeWidth="12" />
+                <text x="24" y="272" fill="#662D91" fontSize="13" fontWeight="700">
                   Av. Dorsal
                 </text>
 
@@ -156,7 +156,7 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 </text>
 
                 {/* Calle Sagitario */}
-                <path d="M 140 330 L 380 330" stroke="#6D28D9" strokeOpacity="0.25" strokeWidth="7" />
+                <path d="M 140 330 L 380 330" stroke="#7A48A0" strokeOpacity="0.25" strokeWidth="7" />
                 <text x="142" y="320" fill="#334155" fontSize="12" fontWeight="600">
                   Calle Sagitario
                 </text>
@@ -192,8 +192,8 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                     aria-label={`Seleccionar ${dep.shortName} en ${dep.address}`}
                     className={`absolute -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg font-semibold text-xs transition-transform cursor-pointer shadow-md ${
                       isSelected
-                        ? 'bg-[#1E8449] text-white scale-105 z-20 ring-2 ring-white'
-                        : 'bg-[#3B1E6D] text-white hover:bg-[#6D28D9] z-10'
+                        ? 'bg-[#237A3B] text-white scale-105 z-20 ring-2 ring-white'
+                        : 'bg-[#662D91] text-white hover:bg-[#7A48A0] z-10'
                     }`}
                   >
                     <span className="font-mono-tabular font-bold">{idx + 1}.</span>
@@ -217,14 +217,14 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                     }}
                     className={`p-2 rounded-lg border text-left transition-colors cursor-pointer ${
                       isSelected
-                        ? 'border-[#3B1E6D] bg-[#3B1E6D]/5 text-[#3B1E6D]'
+                        ? 'border-[#662D91] bg-[#662D91]/5 text-[#662D91]'
                         : 'border-[#DDE3EA] hover:bg-[#F4F6F9] text-[#4A5568]'
                     }`}
                   >
-                    <span className="block text-[11px] font-mono-tabular font-bold text-[#6D28D9]">
+                    <span className="block text-[11px] font-mono-tabular font-bold text-[#7A48A0]">
                       Sede 0{idx + 1}
                     </span>
-                    <span className="block text-xs font-semibold truncate text-[#3B1E6D] hc-text">
+                    <span className="block text-xs font-semibold truncate text-[#662D91] hc-text">
                       {dep.shortName}
                     </span>
                   </button>
@@ -237,35 +237,35 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
           <div className="lg:col-span-5 bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 flex flex-col justify-between">
             <div className="space-y-5">
               <div>
-                <p className="text-xs font-semibold text-[#6D28D9] mb-1">
+                <p className="text-xs font-semibold text-[#7A48A0] mb-1">
                   Dependencia Municipal Seleccionada
                 </p>
-                <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                <h3 className="font-display font-bold text-xl text-[#662D91] hc-text">
                   {selected.name}
                 </h3>
               </div>
 
               <div className="space-y-3 pt-2 border-t border-[#DDE3EA] text-[15px]">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <MapPin className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="font-semibold text-[#3B1E6D] hc-text">Dirección exacta</p>
+                    <p className="font-semibold text-[#662D91] hc-text">Dirección exacta</p>
                     <p className="text-[#4A5568] hc-muted">{selected.address}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Clock className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="font-semibold text-[#3B1E6D] hc-text">Horario de atención</p>
+                    <p className="font-semibold text-[#662D91] hc-text">Horario de atención</p>
                     <p className="text-[#4A5568] hc-muted">{selected.hours}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Phone className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="font-semibold text-[#3B1E6D] hc-text">Teléfono de contacto</p>
+                    <p className="font-semibold text-[#662D91] hc-text">Teléfono de contacto</p>
                     <p className="text-[#4A5568] hc-muted font-mono-tabular">
                       {selected.phone}
                       {selected.emergencyPhone ? ` · Emergencias ${selected.emergencyPhone}` : ''}
@@ -274,22 +274,22 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <TrainFront className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <TrainFront className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <div>
-                    <p className="font-semibold text-[#3B1E6D] hc-text">Acceso Transporte Público</p>
+                    <p className="font-semibold text-[#662D91] hc-text">Acceso Transporte Público</p>
                     <p className="text-[#4A5568] hc-muted">{selected.metroAccess}</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-3 border-t border-[#DDE3EA]">
-                <p className="font-display font-bold text-sm text-[#3B1E6D] hc-text mb-2">
+                <p className="font-display font-bold text-sm text-[#662D91] hc-text mb-2">
                   Trámites y unidades en esta sede:
                 </p>
                 <ul className="space-y-1.5 text-sm text-[#4A5568] hc-muted">
                   {selected.services.map((srv) => (
                     <li key={srv} className="flex items-start gap-2">
-                      <span className="text-[#1E8449] font-bold" aria-hidden="true">•</span>
+                      <span className="text-[#237A3B] font-bold" aria-hidden="true">•</span>
                       <span>{srv}</span>
                     </li>
                   ))}
@@ -304,7 +304,7 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-lg bg-[#3B1E6D] hover:bg-[#2A1252] text-white font-semibold text-sm transition-colors hc-btn-primary"
+                className="inline-flex items-center justify-center gap-2 flex-1 px-4 py-2.5 rounded-lg bg-[#662D91] hover:bg-[#4A2068] text-white font-semibold text-sm transition-colors hc-btn-primary"
               >
                 <Navigation className="w-4 h-4" aria-hidden="true" />
                 <span>Abrir ruta en Google Maps</span>
@@ -313,7 +313,7 @@ export const DependenciesMap: React.FC<DependenciesMapProps> = ({ onNavigate }) 
                 <button
                   type="button"
                   onClick={() => onNavigate('contacto-opir')}
-                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-[#3B1E6D] text-[#3B1E6D] hc-text font-semibold text-sm hover:bg-[#F4F6F9] transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-[#662D91] text-[#662D91] hc-text font-semibold text-sm hover:bg-[#F4F6F9] transition-colors cursor-pointer"
                 >
                   Enviar consulta OPIR
                 </button>

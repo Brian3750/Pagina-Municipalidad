@@ -6,12 +6,12 @@
   --font-mono: 'JetBrains Mono', monospace;
   --font-scale: 1;
 
-  --muni-purple: #3B1E6D;
-  --muni-purple-dark: #2A1252;
-  --muni-violet: #6D28D9;
-  --muni-lavender: #EDE9FE;
-  --muni-emerald: #1E8449;
-  --muni-emerald-hover: #176B3A;
+  --muni-purple: #662D91;
+  --muni-purple-dark: #4A2068;
+  --muni-violet: #7A48A0;
+  --muni-lavender: #F2ECF6;
+  --muni-emerald: #237A3B;
+  --muni-emerald-hover: #195F31;
   --muni-bg: #FFFFFF;
   --muni-surface: #F4F6F9;
   --muni-text: #1A2332;
@@ -50,7 +50,7 @@ html.high-contrast {
   --muni-muted: #E2E8F0;
   --muni-border: #FFD400;
   --muni-purple: #000000;
-  --muni-violet: #C4B5FD;
+  --muni-violet: #CBB1DC;
   --muni-emerald: #22C55E;
 }
 
@@ -92,7 +92,7 @@ html.high-contrast .hc-btn-primary {
 
 /* Accessible focus outlines */
 :focus-visible {
-  outline: 3px solid #6D28D9;
+  outline: 3px solid #7A48A0;
   outline-offset: 2px;
 }
 
@@ -109,3 +109,5 @@ html.high-contrast :focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+

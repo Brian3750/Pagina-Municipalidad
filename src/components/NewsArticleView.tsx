@@ -25,7 +25,7 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
           <button
             type="button"
             onClick={onBackHome}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#6D28D9] hover:underline cursor-pointer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#7A48A0] hover:underline cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" aria-hidden="true" />
             <span>Volver a Portada de Noticias</span>
@@ -34,7 +34,7 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
 
         <header className="space-y-4 mb-8">
           <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-[#4A5568] hc-muted">
-            <span className="text-[#6D28D9]">{article.category}</span>
+            <span className="text-[#7A48A0]">{article.category}</span>
             <span aria-hidden="true">·</span>
             <span className="inline-flex items-center gap-1.5">
               <Calendar className="w-4 h-4" aria-hidden="true" />
@@ -47,7 +47,7 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
             </span>
           </div>
 
-          <h1 className="font-display font-extrabold text-2xl sm:text-4xl text-[#3B1E6D] hc-text leading-tight text-balance">
+          <h1 className="font-display font-extrabold text-2xl sm:text-4xl text-[#662D91] hc-text leading-tight text-balance">
             {article.title}
           </h1>
 
@@ -55,13 +55,13 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
             {article.summary}
           </p>
 
-          <p className="inline-flex items-center gap-2 text-sm font-medium text-[#3B1E6D] hc-text">
-            <MapPin className="w-4 h-4 text-[#1E8449]" aria-hidden="true" />
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-[#662D91] hc-text">
+            <MapPin className="w-4 h-4 text-[#237A3B]" aria-hidden="true" />
             <span>{article.locationTag}</span>
           </p>
         </header>
 
-        <figure className="mb-8 rounded-xl overflow-hidden border border-[#DDE3EA] bg-[#EDE9FE]">
+        <figure className="mb-8 rounded-xl overflow-hidden border border-[#DDE3EA] bg-[#F2ECF6]">
           <img
             src={article.imageUrl}
             alt={article.imageAlt}
@@ -81,7 +81,7 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
 
         <div className="mt-10 p-6 rounded-xl bg-[#F4F6F9] hc-card border border-[#DDE3EA] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+            <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">
               ¿Tienes dudas o deseas realizar un requerimiento sobre este proyecto?
             </h2>
             <p className="text-sm text-[#4A5568] hc-muted">
@@ -91,14 +91,14 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('contacto-opir')}
-            className="px-5 py-2.5 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-sm whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
+            className="px-5 py-2.5 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-sm whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
           >
             Ir a Contacto / OPIR
           </button>
         </div>
 
         <section className="mt-12 pt-8 border-t border-[#DDE3EA]">
-          <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text mb-5">
+          <h2 className="font-display font-bold text-xl text-[#662D91] hc-text mb-5">
             Otras noticias recientes de Conchalí
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -107,12 +107,12 @@ export const NewsArticleView: React.FC<NewsArticleViewProps> = ({
                 key={rel.id}
                 type="button"
                 onClick={() => onSelectArticle(rel)}
-                className="text-left p-5 rounded-xl border border-[#DDE3EA] hover:border-[#6D28D9] bg-white hc-card transition-colors cursor-pointer"
+                className="text-left p-5 rounded-xl border border-[#DDE3EA] hover:border-[#7A48A0] bg-white hc-card transition-colors cursor-pointer"
               >
-                <p className="text-xs font-semibold text-[#6D28D9] mb-1">
+                <p className="text-xs font-semibold text-[#7A48A0] mb-1">
                   {rel.category} · {rel.date}
                 </p>
-                <h3 className="font-display font-bold text-base text-[#3B1E6D] hc-text leading-snug">
+                <h3 className="font-display font-bold text-base text-[#662D91] hc-text leading-snug">
                   {rel.title}
                 </h3>
               </button>

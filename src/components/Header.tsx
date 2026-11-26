@@ -80,21 +80,21 @@ export const Header: React.FC<HeaderProps> = ({
     >
       <a
         href="#contenido-principal"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#3B1E6D] focus:text-white focus:rounded-md focus:font-semibold"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#662D91] focus:text-white focus:rounded-md focus:font-semibold"
       >
         Saltar al contenido principal
       </a>
 
       {/* Barra Superior Institucional (Desktop) — compacta y accesible */}
-      <div className="hidden lg:block bg-[#3B1E6D] text-white text-[13px] border-b border-white/10">
+      <div className="hidden lg:block bg-[#662D91] text-white text-[13px] border-b border-white/10">
         <div className="max-w-[1280px] mx-auto px-6 h-10 flex items-center justify-between gap-6">
           <div className="flex items-center gap-5">
             <a
               href="tel:1425"
-              className="inline-flex items-center gap-2 font-semibold text-white hover:text-[#DDD6FE] transition-colors whitespace-nowrap shrink-0"
+              className="inline-flex items-center gap-2 font-semibold text-white hover:text-[#E4D6ED] transition-colors whitespace-nowrap shrink-0"
               title="Llamar a Seguridad Pública y Emergencias Comunales"
             >
-              <Phone className="w-3.5 h-3.5 text-[#C4B5FD]" aria-hidden="true" />
+              <Phone className="w-3.5 h-3.5 text-[#CBB1DC]" aria-hidden="true" />
               <span>Emergencias y Seguridad Pública: 1425</span>
             </a>
             <span className="text-white/30" aria-hidden="true">|</span>
@@ -186,7 +186,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="flex items-center gap-2.5 text-left cursor-pointer shrink-0 group"
         >
           <MunicipalShield className="w-8 h-9 lg:w-9 lg:h-10 shrink-0" />
-          <span className="font-display font-bold text-[17px] lg:text-[18px] tracking-tight text-[#3B1E6D] hc-text whitespace-nowrap shrink-0">
+          <span className="font-display font-bold text-[17px] lg:text-[18px] tracking-tight text-[#662D91] hc-text whitespace-nowrap shrink-0">
             Municipalidad de Conchalí
           </span>
         </button>
@@ -198,8 +198,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => go('inicio')}
             className={`text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
               currentPage === 'inicio'
-                ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
             }`}
           >
             Inicio
@@ -213,8 +213,8 @@ export const Header: React.FC<HeaderProps> = ({
               aria-expanded={openDropdown === 'municipio'}
               className={`inline-flex items-center gap-1 text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
                 currentPage.startsWith('municipio-')
-                  ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                  : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                  ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                  : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
               }`}
             >
               <span>Municipio</span>
@@ -234,7 +234,7 @@ export const Header: React.FC<HeaderProps> = ({
                     key={item.id}
                     type="button"
                     onClick={() => go(item.id)}
-                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#3B1E6D] font-medium transition-colors cursor-pointer"
+                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#662D91] font-medium transition-colors cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -251,8 +251,8 @@ export const Header: React.FC<HeaderProps> = ({
               aria-expanded={openDropdown === 'tramites'}
               className={`inline-flex items-center gap-1 text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
                 currentPage.startsWith('tramites-')
-                  ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                  : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                  ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                  : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
               }`}
             >
               <span>Trámites y Pagos</span>
@@ -263,7 +263,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[680px] bg-white hc-card border border-[#DDE3EA] rounded-xl shadow-xl p-6 z-50">
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#DDE3EA]">
                   <div>
-                    <p className="font-display font-bold text-[#3B1E6D] hc-text text-base">
+                    <p className="font-display font-bold text-[#662D91] hc-text text-base">
                       Trámites, Pagos y Licencias Municipales
                     </p>
                     <p className="text-sm text-[#4A5568] hc-muted">
@@ -273,7 +273,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <button
                     type="button"
                     onClick={() => go('tramites-todos')}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#6D28D9] hover:underline whitespace-nowrap cursor-pointer"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#7A48A0] hover:underline whitespace-nowrap cursor-pointer"
                   >
                     <span>Ver todos los trámites</span>
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -327,11 +327,11 @@ export const Header: React.FC<HeaderProps> = ({
                         onClick={() => go(item.id)}
                         className="flex items-start gap-3 p-3 rounded-lg hover:bg-[#F4F6F9] text-left transition-colors cursor-pointer group"
                       >
-                        <div className="p-2 rounded-md bg-[#EDE9FE] text-[#6D28D9] group-hover:bg-[#3B1E6D] group-hover:text-white transition-colors shrink-0">
+                        <div className="p-2 rounded-md bg-[#F2ECF6] text-[#7A48A0] group-hover:bg-[#662D91] group-hover:text-white transition-colors shrink-0">
                           <Icon className="w-5 h-5" aria-hidden="true" />
                         </div>
                         <div>
-                          <div className="font-semibold text-[15px] text-[#3B1E6D] hc-text">
+                          <div className="font-semibold text-[15px] text-[#662D91] hc-text">
                             {item.title}
                           </div>
                           <div className="text-[13px] text-[#4A5568] hc-muted leading-snug">
@@ -354,8 +354,8 @@ export const Header: React.FC<HeaderProps> = ({
               aria-expanded={openDropdown === 'servicios'}
               className={`inline-flex items-center gap-1 text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
                 currentPage.startsWith('servicios-')
-                  ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                  : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                  ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                  : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
               }`}
             >
               <span>Servicios</span>
@@ -375,7 +375,7 @@ export const Header: React.FC<HeaderProps> = ({
                     key={item.id}
                     type="button"
                     onClick={() => go(item.id)}
-                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#3B1E6D] font-medium transition-colors cursor-pointer"
+                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#662D91] font-medium transition-colors cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -392,8 +392,8 @@ export const Header: React.FC<HeaderProps> = ({
               aria-expanded={openDropdown === 'cultura'}
               className={`inline-flex items-center gap-1 text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
                 currentPage.startsWith('cultura-')
-                  ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                  : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                  ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                  : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
               }`}
             >
               <span>Cultura y Deporte</span>
@@ -410,7 +410,7 @@ export const Header: React.FC<HeaderProps> = ({
                     key={item.id}
                     type="button"
                     onClick={() => go(item.id)}
-                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#3B1E6D] font-medium transition-colors cursor-pointer"
+                    className="w-full text-left px-4 py-2.5 text-[15px] text-[#1A2332] hc-text hover:bg-[#F4F6F9] hover:text-[#662D91] font-medium transition-colors cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -424,8 +424,8 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => go('contacto-opir')}
             className={`text-[15px] font-semibold whitespace-nowrap shrink-0 py-2 border-b-2 transition-colors cursor-pointer ${
               currentPage === 'contacto-opir'
-                ? 'text-[#3B1E6D] border-[#6D28D9] hc-link'
-                : 'text-[#1A2332] border-transparent hover:text-[#6D28D9] hc-text'
+                ? 'text-[#662D91] border-[#7A48A0] hc-link'
+                : 'text-[#1A2332] border-transparent hover:text-[#7A48A0] hc-text'
             }`}
           >
             Contacto / OPIR
@@ -437,7 +437,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => go('tramites-todos')}
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-[15px] transition-colors whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-[15px] transition-colors whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
           >
             <span>Trámites en Línea</span>
           </button>
@@ -447,7 +447,7 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'}
-            className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#DDE3EA] text-[#3B1E6D] hc-text hover:bg-[#F4F6F9] cursor-pointer"
+            className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-[#DDE3EA] text-[#662D91] hc-text hover:bg-[#F4F6F9] cursor-pointer"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -461,7 +461,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#DDE3EA]">
             <a
               href="tel:1425"
-              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#3B1E6D] text-white text-sm font-semibold"
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#662D91] text-white text-sm font-semibold"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               <span>Emergencias: 1425</span>
@@ -500,7 +500,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             type="button"
             onClick={() => go('tramites-todos')}
-            className="w-full py-3 px-4 rounded-lg bg-[#1E8449] text-white font-semibold text-base text-center hc-btn-primary"
+            className="w-full py-3 px-4 rounded-lg bg-[#237A3B] text-white font-semibold text-base text-center hc-btn-primary"
           >
             Trámites en Línea
           </button>
@@ -650,7 +650,7 @@ export const Header: React.FC<HeaderProps> = ({
             Contacto / Oficina de Partes Digital (OPIR)
           </button>
 
-          <div className="pt-2 flex flex-wrap gap-3 text-sm text-[#6D28D9] font-semibold">
+          <div className="pt-2 flex flex-wrap gap-3 text-sm text-[#7A48A0] font-semibold">
             <button type="button" onClick={() => go('transparencia')}>
               Ley de Transparencia
             </button>

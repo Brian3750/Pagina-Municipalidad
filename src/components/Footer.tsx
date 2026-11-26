@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect }) => {
   return (
-    <footer className="bg-[#2A1252] text-white border-t border-white/10">
+    <footer className="bg-[#4A2068] text-white border-t border-white/10">
       <div className="max-w-[1280px] mx-auto px-4 lg:px-6 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Columna 1: Identidad Institucional y Dirección Oficial */}
@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <p className="font-display font-bold text-lg leading-tight">
                   Ilustre Municipalidad de Conchalí
                 </p>
-                <p className="text-xs text-[#DDD6FE]">Región Metropolitana, Chile</p>
+                <p className="text-xs text-[#E4D6ED]">Región Metropolitana, Chile</p>
               </div>
             </div>
 
@@ -31,15 +31,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
 
             <div className="space-y-2 text-sm text-white/85 pt-1">
               <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#C4B5FD] shrink-0 mt-0.5" aria-hidden="true" />
+                <MapPin className="w-4 h-4 text-[#CBB1DC] shrink-0 mt-0.5" aria-hidden="true" />
                 <span>Av. Independencia 3499, Conchalí, Región Metropolitana</span>
               </p>
               <p className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#C4B5FD] shrink-0" aria-hidden="true" />
+                <Clock className="w-4 h-4 text-[#CBB1DC] shrink-0" aria-hidden="true" />
                 <span>Lun a Vie · 08:30 a 14:00 hrs</span>
               </p>
               <p className="flex items-center gap-2 font-semibold text-white">
-                <Phone className="w-4 h-4 text-[#C4B5FD] shrink-0" aria-hidden="true" />
+                <Phone className="w-4 h-4 text-[#CBB1DC] shrink-0" aria-hidden="true" />
                 <span>Emergencias Seguridad Pública: 1425</span>
               </p>
             </div>
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                   <button
                     type="button"
                     onClick={() => onNavigate(item.page)}
-                    className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer transition-colors"
+                    className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer transition-colors"
                   >
                     {item.label}
                   </button>
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('transparencia')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Transparencia Activa (Ley N° 20.285)
                 </button>
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('transparencia')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Transparencia Pasiva (Solicitud de Información)
                 </button>
@@ -100,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('portal-lobby')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Portal de Lobby y Audiencias (Ley N° 20.730)
                 </button>
@@ -109,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('denuncia-ley-karin')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Canal de Denuncia Ley Karin (Ley N° 21.643)
                 </button>
@@ -118,7 +118,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('municipio-cuenta-publica')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Cuenta Pública y Presupuesto Municipal
                 </button>
@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
                 <button
                   type="button"
                   onClick={() => onNavigate('municipio-plan-regulador')}
-                  className="hover:text-[#DDD6FE] hover:underline text-left cursor-pointer"
+                  className="hover:text-[#E4D6ED] hover:underline text-left cursor-pointer"
                 >
                   Plan Regulador Comunal (PRC)
                 </button>
@@ -172,7 +172,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestRedirect })
             </div>
 
             <div className="pt-3 border-t border-white/10 space-y-2">
-              <div className="flex items-center gap-2 text-xs text-[#DDD6FE]">
+              <div className="flex items-center gap-2 text-xs text-[#E4D6ED]">
                 <ShieldCheck className="w-4 h-4 shrink-0" aria-hidden="true" />
                 <span>Estándar Accesibilidad Digital WCAG 2.1 AA</span>
               </div>

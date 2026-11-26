@@ -43,17 +43,17 @@ const PageBanner: React.FC<{
   subtitle: string;
   onBack: () => void;
 }> = ({ section, title, subtitle, onBack }) => (
-  <div className="bg-[#3B1E6D] text-white py-10 lg:py-12 border-b border-white/10">
+  <div className="bg-[#662D91] text-white py-10 lg:py-12 border-b border-white/10">
     <div className="max-w-[1280px] mx-auto px-4 lg:px-6 space-y-3">
       <button
         type="button"
         onClick={onBack}
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#DDD6FE] hover:text-white cursor-pointer"
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#E4D6ED] hover:text-white cursor-pointer"
       >
         <ArrowLeft className="w-4 h-4" aria-hidden="true" />
         <span>Volver al Inicio</span>
       </button>
-      <p className="text-sm font-semibold text-[#DDD6FE]">{section}</p>
+      <p className="text-sm font-semibold text-[#E4D6ED]">{section}</p>
       <h1 className="font-display font-extrabold text-2xl sm:text-4xl text-white text-balance">
         {title}
       </h1>
@@ -122,8 +122,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                   onClick={() => setCatalogCategory(cat)}
                   className={`px-3.5 py-2 rounded-lg text-sm font-semibold cursor-pointer transition-colors ${
                     catalogCategory === cat
-                      ? 'bg-[#3B1E6D] text-white hc-btn-primary'
-                      : 'bg-white text-[#4A5568] border border-[#DDE3EA] hover:text-[#3B1E6D]'
+                      ? 'bg-[#662D91] text-white hc-btn-primary'
+                      : 'bg-white text-[#4A5568] border border-[#DDE3EA] hover:text-[#662D91]'
                   }`}
                 >
                   {cat}
@@ -140,13 +140,13 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="p-2.5 rounded-lg bg-[#EDE9FE] text-[#6D28D9]">
+                    <div className="p-2.5 rounded-lg bg-[#F2ECF6] text-[#7A48A0]">
                       <TramiteIcon name={t.iconName} className="w-6 h-6" />
                     </div>
                     <span className="text-xs font-semibold text-[#4A5568] hc-muted">{t.mode}</span>
                   </div>
-                  <p className="text-xs font-semibold text-[#6D28D9]">{t.category}</p>
-                  <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">{t.title}</h2>
+                  <p className="text-xs font-semibold text-[#7A48A0]">{t.category}</p>
+                  <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">{t.title}</h2>
                   <p className="text-[15px] text-[#4A5568] hc-muted">{t.shortDesc}</p>
                   <p className="text-xs text-[#4A5568] hc-muted pt-1">
                     <strong>Sede:</strong> {t.officeLocation}
@@ -165,7 +165,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                           description: t.shortDesc,
                         })
                       }
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
+                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
                     >
                       <span>{t.actionLabel}</span>
                       <ExternalLink className="w-4 h-4" aria-hidden="true" />
@@ -174,7 +174,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                   <button
                     type="button"
                     onClick={() => onNavigate(t.targetPage)}
-                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-[#3B1E6D] text-[#3B1E6D] hc-text font-semibold text-sm hover:bg-[#F4F6F9] cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-[#662D91] text-[#662D91] hc-text font-semibold text-sm hover:bg-[#F4F6F9] cursor-pointer"
                   >
                     <span>Ver ficha completa y requisitos</span>
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -211,13 +211,13 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
         <div className="max-w-[1100px] mx-auto px-4 lg:px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-8 space-y-8">
             <section className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-4">
-              <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+              <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                 Documentos y Requisitos Obligatorios
               </h2>
               <ul className="space-y-3 text-base text-[#1A2332] hc-text">
                 {tramite.requirements.map((req, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#1E8449] shrink-0 mt-0.5" aria-hidden="true" />
+                    <CheckCircle2 className="w-5 h-5 text-[#237A3B] shrink-0 mt-0.5" aria-hidden="true" />
                     <span>{req}</span>
                   </li>
                 ))}
@@ -227,12 +227,12 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
             {/* Módulo interactivo de reserva para Licencias de Conducir */}
             {pageId === 'tramites-licencia' && (
               <section className="bg-[#F4F6F9] hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-4">
-                <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                   Pre-reserva de Bloque Horario en Gabinete Psicotécnico
                 </h2>
                 {licenciaReservada ? (
-                  <div className="p-5 rounded-lg bg-[#1E8449]/10 border border-[#1E8449]/30 space-y-2">
-                    <p className="font-bold text-[#3B1E6D] hc-text">
+                  <div className="p-5 rounded-lg bg-[#237A3B]/10 border border-[#237A3B]/30 space-y-2">
+                    <p className="font-bold text-[#662D91] hc-text">
                       Pre-reserva registrada para {licenciaTipo}
                     </p>
                     <p className="text-[15px] text-[#1A2332] hc-text">
@@ -241,7 +241,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                     <button
                       type="button"
                       onClick={() => setLicenciaReservada(false)}
-                      className="text-sm font-semibold text-[#6D28D9] underline cursor-pointer pt-1"
+                      className="text-sm font-semibold text-[#7A48A0] underline cursor-pointer pt-1"
                     >
                       Modificar bloque horario
                     </button>
@@ -285,7 +285,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                     <button
                       type="button"
                       onClick={() => setLicenciaReservada(true)}
-                      className="px-5 py-2.5 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold cursor-pointer hc-btn-primary"
+                      className="px-5 py-2.5 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold cursor-pointer hc-btn-primary"
                     >
                       Confirmar pre-reserva presencial
                     </button>
@@ -297,7 +297,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
 
           <aside className="lg:col-span-4 space-y-5">
             <div className="bg-[#F4F6F9] hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-4">
-              <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+              <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">
                 Información del Trámite
               </h2>
               <dl className="space-y-3 text-sm">
@@ -326,7 +326,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                       description: tramite.shortDesc,
                     })
                   }
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-base cursor-pointer hc-btn-primary"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-base cursor-pointer hc-btn-primary"
                 >
                   <span>{tramite.actionLabel}</span>
                   <ExternalLink className="w-4 h-4" aria-hidden="true" />
@@ -335,7 +335,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('contacto-opir')}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#3B1E6D] hover:bg-[#2A1252] text-white font-semibold text-base cursor-pointer hc-btn-primary"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#662D91] hover:bg-[#4A2068] text-white font-semibold text-base cursor-pointer hc-btn-primary"
                 >
                   <span>Consultar vía OPIR</span>
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -364,28 +364,28 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
           </div>
           <aside className="lg:col-span-4 space-y-5">
             <div className="bg-[#F4F6F9] hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-4">
-              <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+              <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">
                 Canales de Atención Presencial y Telefónica
               </h2>
               <div className="space-y-3 text-[15px] text-[#4A5568] hc-muted">
                 <p className="flex items-start gap-2.5">
-                  <MapPin className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <MapPin className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <span>
-                    <strong className="text-[#3B1E6D] hc-text block">Edificio Consistorial:</strong>
+                    <strong className="text-[#662D91] hc-text block">Edificio Consistorial:</strong>
                     Av. Independencia 3499, Conchalí
                   </span>
                 </p>
                 <p className="flex items-start gap-2.5">
-                  <Clock className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Clock className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <span>
-                    <strong className="text-[#3B1E6D] hc-text block">Horario OIRS / OPIR:</strong>
+                    <strong className="text-[#662D91] hc-text block">Horario OIRS / OPIR:</strong>
                     Lunes a viernes de 08:30 a 14:00 hrs
                   </span>
                 </p>
                 <p className="flex items-start gap-2.5">
-                  <Phone className="w-5 h-5 text-[#6D28D9] shrink-0 mt-0.5" aria-hidden="true" />
+                  <Phone className="w-5 h-5 text-[#7A48A0] shrink-0 mt-0.5" aria-hidden="true" />
                   <span>
-                    <strong className="text-[#3B1E6D] hc-text block">Mesa Central / Emergencias:</strong>
+                    <strong className="text-[#662D91] hc-text block">Mesa Central / Emergencias:</strong>
                     +56 2 2828 6000 · Fono Seguridad 1425 (24/7)
                   </span>
                 </p>
@@ -394,7 +394,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('denuncia-ley-karin')}
-                  className="text-sm font-semibold text-[#6D28D9] hover:underline cursor-pointer"
+                  className="text-sm font-semibold text-[#7A48A0] hover:underline cursor-pointer"
                 >
                   Ir al Canal Reservado de Denuncia Ley Karin →
                 </button>
@@ -422,7 +422,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
           </div>
           <aside className="lg:col-span-4 space-y-5">
             <div className="bg-[#F4F6F9] hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-4">
-              <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+              <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">
                 Indicaciones previas a tu cita
               </h2>
               <ul className="space-y-2.5 text-sm text-[#4A5568] hc-muted">
@@ -486,7 +486,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
           <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#F4F6F9] hc-surface border-b border-[#DDE3EA] text-sm font-bold text-[#3B1E6D] hc-text">
+                <tr className="bg-[#F4F6F9] hc-surface border-b border-[#DDE3EA] text-sm font-bold text-[#662D91] hc-text">
                   <th className="py-3.5 px-5">Autoridad</th>
                   <th className="py-3.5 px-5">Cargo</th>
                   <th className="py-3.5 px-5">Comisión Principal</th>
@@ -496,7 +496,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
               <tbody className="divide-y divide-[#DDE3EA] text-[15px]">
                 {CONCEJO_MEMBERS.map((m) => (
                   <tr key={m.name} className="hover:bg-[#F4F6F9]/60">
-                    <td className="py-4 px-5 font-semibold text-[#3B1E6D] hc-text">{m.name}</td>
+                    <td className="py-4 px-5 font-semibold text-[#662D91] hc-text">{m.name}</td>
                     <td className="py-4 px-5 text-[#4A5568] hc-muted">{m.role}</td>
                     <td className="py-4 px-5 text-[#1A2332] hc-text">{m.commission}</td>
                     <td className="py-4 px-5 text-[#4A5568] hc-muted">{m.schedule}</td>
@@ -602,8 +602,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
         <div className="max-w-[1280px] mx-auto px-4 lg:px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {infoMap.cards.map((c) => (
             <div key={c.h} className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-2.5">
-              <Building2 className="w-6 h-6 text-[#6D28D9]" aria-hidden="true" />
-              <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">{c.h}</h2>
+              <Building2 className="w-6 h-6 text-[#7A48A0]" aria-hidden="true" />
+              <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">{c.h}</h2>
               <p className="text-[15px] text-[#4A5568] hc-muted leading-relaxed">{c.p}</p>
             </div>
           ))}
@@ -643,8 +643,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
             {pageId === 'servicios-omil' && (
               <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-4">
                 <div className="flex items-center gap-2.5">
-                  <Briefcase className="w-6 h-6 text-[#1E8449]" aria-hidden="true" />
-                  <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                  <Briefcase className="w-6 h-6 text-[#237A3B]" aria-hidden="true" />
+                  <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                     Ofertas Laborales Vigentes en la Zona Norte
                   </h2>
                 </div>
@@ -656,13 +656,13 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                   ].map((job) => (
                     <div key={job.cargo} className="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div>
-                        <p className="font-semibold text-[#3B1E6D] hc-text">{job.cargo}</p>
+                        <p className="font-semibold text-[#662D91] hc-text">{job.cargo}</p>
                         <p className="text-sm text-[#4A5568] hc-muted">{job.jornada} · {job.vacantes}</p>
                       </div>
                       <button
                         type="button"
                         onClick={() => onNavigate('contacto-opir')}
-                        className="px-4 py-2 rounded-lg bg-[#1E8449] text-white text-sm font-semibold whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
+                        className="px-4 py-2 rounded-lg bg-[#237A3B] text-white text-sm font-semibold whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
                       >
                         Postular vía OMIL
                       </button>
@@ -674,7 +674,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
 
             {pageId === 'servicios-rsh' && (
               <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-4">
-                <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                   Actualización y Trámites del Registro Social de Hogares
                 </h2>
                 <p className="text-[15px] text-[#4A5568] hc-muted leading-relaxed">
@@ -691,7 +691,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                         description: 'Serás redirigido al sitio oficial del Registro Social de Hogares para ingresar con tu ClaveÚnica.',
                       })
                     }
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#1E8449] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#237A3B] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
                   >
                     <span>Ir a registrosocial.gob.cl</span>
                     <ExternalLink className="w-4 h-4" aria-hidden="true" />
@@ -709,7 +709,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6 sm:p-8 space-y-4">
-                  <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                  <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                     Red de Atención Primaria de Salud (CESFAM) y Farmacia Popular
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -720,7 +720,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                       { name: 'CESFAM Dr. Alberto Bachelet', dir: 'Av. La Palmilla 3780 · Horario 08:00 a 20:00 hrs' },
                     ].map((c) => (
                       <div key={c.name} className="p-4 rounded-lg bg-[#F4F6F9] hc-surface border border-[#DDE3EA]">
-                        <p className="font-bold text-[#3B1E6D] hc-text">{c.name}</p>
+                        <p className="font-bold text-[#662D91] hc-text">{c.name}</p>
                         <p className="text-[#4A5568] hc-muted mt-1">{c.dir}</p>
                       </div>
                     ))}
@@ -731,8 +731,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
 
             {(pageId === 'servicios-dideco' || pageId === 'servicios-adulto-mayor') && (
               <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-4">
-                <Users className="w-7 h-7 text-[#6D28D9]" aria-hidden="true" />
-                <h2 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+                <Users className="w-7 h-7 text-[#7A48A0]" aria-hidden="true" />
+                <h2 className="font-display font-bold text-xl text-[#662D91] hc-text">
                   {pageId === 'servicios-dideco'
                     ? 'Programas Sociales y Atención Vecinal DIDECO'
                     : 'Acompañamiento Integral para Personas Mayores'}
@@ -748,7 +748,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
 
           <aside className="lg:col-span-4 space-y-4">
             <div className="bg-[#F4F6F9] hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-3">
-              <h3 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+              <h3 className="font-display font-bold text-lg text-[#662D91] hc-text">
                 Sede Central DIDECO
               </h3>
               <p className="text-sm text-[#4A5568] hc-muted">
@@ -763,7 +763,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
               <button
                 type="button"
                 onClick={() => onNavigate('servicios-veterinaria')}
-                className="w-full mt-2 px-4 py-2.5 rounded-lg bg-[#3B1E6D] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
+                className="w-full mt-2 px-4 py-2.5 rounded-lg bg-[#662D91] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
               >
                 Ir a Hora Veterinaria
               </button>
@@ -810,8 +810,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
               />
             </div>
             <div className="lg:col-span-6 space-y-4">
-              <BookOpen className="w-7 h-7 text-[#6D28D9]" aria-hidden="true" />
-              <h2 className="font-display font-bold text-2xl text-[#3B1E6D] hc-text">
+              <BookOpen className="w-7 h-7 text-[#7A48A0]" aria-hidden="true" />
+              <h2 className="font-display font-bold text-2xl text-[#662D91] hc-text">
                 {isDeporte
                   ? 'Infraestructura Deportiva y Piscina Temperada'
                   : 'Programación Cultural y Préstamo de Libros'}
@@ -827,13 +827,13 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                     key={w.id}
                     type="button"
                     onClick={() => onSelectWorkshop(w)}
-                    className="p-4 rounded-xl border border-[#DDE3EA] bg-[#F4F6F9] hover:border-[#6D28D9] text-left cursor-pointer"
+                    className="p-4 rounded-xl border border-[#DDE3EA] bg-[#F4F6F9] hover:border-[#7A48A0] text-left cursor-pointer"
                   >
-                    <p className="text-xs font-bold text-[#6D28D9]">
+                    <p className="text-xs font-bold text-[#7A48A0]">
                       {w.day} {w.month} · {w.time}
                     </p>
-                    <p className="font-bold text-sm text-[#3B1E6D] hc-text mt-1">{w.title}</p>
-                    <p className="text-xs text-[#1E8449] font-semibold mt-2">Inscribirme ahora →</p>
+                    <p className="font-bold text-sm text-[#662D91] hc-text mt-1">{w.title}</p>
+                    <p className="text-xs text-[#237A3B] font-semibold mt-2">Inscribirme ahora →</p>
                   </button>
                 ))}
               </div>
@@ -887,8 +887,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
           ].map((item) => (
             <div key={item.title} className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 flex flex-col justify-between gap-4">
               <div className="space-y-2">
-                <ShieldCheck className="w-6 h-6 text-[#6D28D9]" aria-hidden="true" />
-                <h2 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">{item.title}</h2>
+                <ShieldCheck className="w-6 h-6 text-[#7A48A0]" aria-hidden="true" />
+                <h2 className="font-display font-bold text-lg text-[#662D91] hc-text">{item.title}</h2>
                 <p className="text-[15px] text-[#4A5568] hc-muted">{item.desc}</p>
               </div>
               <button
@@ -901,7 +901,7 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
                     description: item.desc,
                   })
                 }
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#3B1E6D] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#662D91] text-white font-semibold text-sm cursor-pointer hc-btn-primary"
               >
                 <span>Acceder al portal oficial</span>
                 <ExternalLink className="w-4 h-4" aria-hidden="true" />
@@ -924,8 +924,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
       />
       <div className="max-w-[1280px] mx-auto px-4 lg:px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-3">
-          <div className="flex items-center gap-2 text-[#3B1E6D] hc-text">
-            <Layers className="w-5 h-5 text-[#6D28D9]" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-[#662D91] hc-text">
+            <Layers className="w-5 h-5 text-[#7A48A0]" aria-hidden="true" />
             <h2 className="font-display font-bold text-lg">1. Tema Base, FSE y Rendimiento</h2>
           </div>
           <ul className="space-y-2 text-[15px] text-[#4A5568] hc-muted">
@@ -936,8 +936,8 @@ export const InternalPagesView: React.FC<InternalPagesViewProps> = ({
         </div>
 
         <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 space-y-3">
-          <div className="flex items-center gap-2 text-[#3B1E6D] hc-text">
-            <FileCheck2 className="w-5 h-5 text-[#6D28D9]" aria-hidden="true" />
+          <div className="flex items-center gap-2 text-[#662D91] hc-text">
+            <FileCheck2 className="w-5 h-5 text-[#7A48A0]" aria-hidden="true" />
             <h2 className="font-display font-bold text-lg">2. Custom Post Types y Formularios</h2>
           </div>
           <ul className="space-y-2 text-[15px] text-[#4A5568] hc-muted">

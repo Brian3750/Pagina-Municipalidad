@@ -23,15 +23,15 @@ export const ExternalRedirectModal: React.FC<ExternalRedirectModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#2A1252]/75 backdrop-blur-xs"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#4A2068]/75 backdrop-blur-xs"
       role="dialog"
       aria-modal="true"
       aria-labelledby="redirect-modal-title"
     >
       <div className="bg-white hc-card w-full max-w-lg rounded-xl border border-[#DDE3EA] shadow-2xl overflow-hidden">
-        <div className="bg-[#3B1E6D] text-white px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#662D91] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <ShieldCheck className="w-5 h-5 text-[#DDD6FE]" aria-hidden="true" />
+            <ShieldCheck className="w-5 h-5 text-[#E4D6ED]" aria-hidden="true" />
             <h2 id="redirect-modal-title" className="font-display font-bold text-lg">
               Aviso de Redirección a Pasarela Oficial
             </h2>
@@ -48,10 +48,10 @@ export const ExternalRedirectModal: React.FC<ExternalRedirectModalProps> = ({
 
         <div className="p-6 space-y-4">
           <div>
-            <p className="text-sm font-semibold text-[#6D28D9]">
+            <p className="text-sm font-semibold text-[#7A48A0]">
               {target.gatewayName}
             </p>
-            <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text mt-1">
+            <h3 className="font-display font-bold text-xl text-[#662D91] hc-text mt-1">
               {target.title}
             </h3>
           </div>
@@ -65,7 +65,7 @@ export const ExternalRedirectModal: React.FC<ExternalRedirectModalProps> = ({
             <p className="text-[#4A5568] hc-muted">
               Estás saliendo del portal informativo hacia la pasarela segura de pagos o sistema externo. La ventana se abrirá en una pestaña nueva y verificará tu conexión cifrada (HTTPS).
             </p>
-            <p className="font-mono-tabular text-xs text-[#3B1E6D] hc-link break-all pt-1">
+            <p className="font-mono-tabular text-xs text-[#662D91] hc-link break-all pt-1">
               Destino: {target.url}
             </p>
           </div>
@@ -83,7 +83,7 @@ export const ExternalRedirectModal: React.FC<ExternalRedirectModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               onClick={onClose}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-[15px] transition-colors hc-btn-primary"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-[15px] transition-colors hc-btn-primary"
             >
               <span>Continuar al sitio oficial</span>
               <ExternalLink className="w-4 h-4" aria-hidden="true" />

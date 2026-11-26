@@ -127,10 +127,10 @@ export const OpirForm: React.FC = () => {
   if (receipt) {
     return (
       <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-6">
-        <div className="flex items-start gap-4 p-5 rounded-xl bg-[#1E8449]/10 border border-[#1E8449]/30">
-          <CheckCircle2 className="w-7 h-7 text-[#1E8449] shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="flex items-start gap-4 p-5 rounded-xl bg-[#237A3B]/10 border border-[#237A3B]/30">
+          <CheckCircle2 className="w-7 h-7 text-[#237A3B] shrink-0 mt-0.5" aria-hidden="true" />
           <div>
-            <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+            <h3 className="font-display font-bold text-xl text-[#662D91] hc-text">
               Ingreso registrado en Oficina de Partes Digital (OPIR)
             </h3>
             <p className="text-[15px] text-[#4A5568] hc-muted mt-1">
@@ -142,7 +142,7 @@ export const OpirForm: React.FC = () => {
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-xl bg-[#F4F6F9] hc-surface border border-[#DDE3EA] text-[15px]">
           <div>
             <dt className="text-xs font-semibold text-[#4A5568] hc-muted">Número de Folio</dt>
-            <dd className="font-mono-tabular font-bold text-lg text-[#3B1E6D] hc-text mt-0.5">
+            <dd className="font-mono-tabular font-bold text-lg text-[#662D91] hc-text mt-0.5">
               {receipt.folio}
             </dd>
           </div>
@@ -167,7 +167,7 @@ export const OpirForm: React.FC = () => {
           {receipt.archivo && (
             <div className="sm:col-span-2">
               <dt className="text-xs font-semibold text-[#4A5568] hc-muted">Documento adjunto</dt>
-              <dd className="font-mono-tabular text-sm text-[#3B1E6D] hc-text mt-0.5">
+              <dd className="font-mono-tabular text-sm text-[#662D91] hc-text mt-0.5">
                 {receipt.archivo}
               </dd>
             </div>
@@ -178,7 +178,7 @@ export const OpirForm: React.FC = () => {
           <button
             type="button"
             onClick={() => window.print()}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#3B1E6D] text-[#3B1E6D] hc-text font-semibold text-[15px] hover:bg-[#F4F6F9] cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#662D91] text-[#662D91] hc-text font-semibold text-[15px] hover:bg-[#F4F6F9] cursor-pointer"
           >
             <Printer className="w-4 h-4" aria-hidden="true" />
             <span>Imprimir comprobante</span>
@@ -186,7 +186,7 @@ export const OpirForm: React.FC = () => {
           <button
             type="button"
             onClick={resetForm}
-            className="px-5 py-2.5 rounded-lg bg-[#3B1E6D] text-white font-semibold text-[15px] hover:bg-[#2A1252] cursor-pointer hc-btn-primary"
+            className="px-5 py-2.5 rounded-lg bg-[#662D91] text-white font-semibold text-[15px] hover:bg-[#4A2068] cursor-pointer hc-btn-primary"
           >
             Ingresar otra solicitud
           </button>
@@ -202,11 +202,11 @@ export const OpirForm: React.FC = () => {
       noValidate
     >
       <div className="flex items-center gap-3 pb-4 border-b border-[#DDE3EA]">
-        <div className="p-2.5 rounded-lg bg-[#3B1E6D]/10 text-[#3B1E6D]">
+        <div className="p-2.5 rounded-lg bg-[#662D91]/10 text-[#662D91]">
           <FileText className="w-6 h-6" aria-hidden="true" />
         </div>
         <div>
-          <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+          <h3 className="font-display font-bold text-xl text-[#662D91] hc-text">
             Formulario Oficina de Partes Digital (OPIR)
           </h3>
           <p className="text-sm text-[#4A5568] hc-muted">
@@ -367,10 +367,10 @@ export const OpirForm: React.FC = () => {
         </label>
         <label
           htmlFor="opir-archivo"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg border border-dashed border-[#6D28D9] bg-[#F4F6F9] hover:bg-[#EDE9FE] cursor-pointer transition-colors"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg border border-dashed border-[#7A48A0] bg-[#F4F6F9] hover:bg-[#F2ECF6] cursor-pointer transition-colors"
         >
-          <FileUp className="w-5 h-5 text-[#6D28D9] shrink-0" aria-hidden="true" />
-          <span className="text-sm font-medium text-[#3B1E6D]">
+          <FileUp className="w-5 h-5 text-[#7A48A0] shrink-0" aria-hidden="true" />
+          <span className="text-sm font-medium text-[#662D91]">
             {archivo ? `Archivo seleccionado: ${archivo.name}` : 'Seleccionar archivo PDF, JPG o PNG desde tu equipo o celular'}
           </span>
           <input
@@ -390,7 +390,7 @@ export const OpirForm: React.FC = () => {
         </p>
         <button
           type="submit"
-          className="px-6 py-3 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-base transition-colors whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
+          className="px-6 py-3 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-base transition-colors whitespace-nowrap shrink-0 cursor-pointer hc-btn-primary"
         >
           Enviar a Oficina de Partes Digital
         </button>
@@ -459,10 +459,10 @@ export const VeterinariaForm: React.FC = () => {
   if (receipt) {
     return (
       <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-5">
-        <div className="flex items-start gap-4 p-5 rounded-xl bg-[#1E8449]/10 border border-[#1E8449]/30">
-          <CheckCircle2 className="w-7 h-7 text-[#1E8449] shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="flex items-start gap-4 p-5 rounded-xl bg-[#237A3B]/10 border border-[#237A3B]/30">
+          <CheckCircle2 className="w-7 h-7 text-[#237A3B] shrink-0 mt-0.5" aria-hidden="true" />
           <div>
-            <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+            <h3 className="font-display font-bold text-xl text-[#662D91] hc-text">
               Solicitud de Hora Veterinaria recibida
             </h3>
             <p className="text-[15px] text-[#4A5568] hc-muted mt-1">
@@ -474,7 +474,7 @@ export const VeterinariaForm: React.FC = () => {
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-xl bg-[#F4F6F9] hc-surface border border-[#DDE3EA] text-[15px]">
           <div>
             <dt className="text-xs font-semibold text-[#4A5568] hc-muted">Folio de Atención</dt>
-            <dd className="font-mono-tabular font-bold text-lg text-[#3B1E6D] hc-text">{receipt.folio}</dd>
+            <dd className="font-mono-tabular font-bold text-lg text-[#662D91] hc-text">{receipt.folio}</dd>
           </div>
           <div>
             <dt className="text-xs font-semibold text-[#4A5568] hc-muted">Tutor Responsable</dt>
@@ -499,7 +499,7 @@ export const VeterinariaForm: React.FC = () => {
             setNombreMascota('');
             setMotivo('');
           }}
-          className="px-5 py-2.5 rounded-lg bg-[#3B1E6D] text-white font-semibold hover:bg-[#2A1252] cursor-pointer hc-btn-primary"
+          className="px-5 py-2.5 rounded-lg bg-[#662D91] text-white font-semibold hover:bg-[#4A2068] cursor-pointer hc-btn-primary"
         >
           Solicitar otra hora veterinaria
         </button>
@@ -514,11 +514,11 @@ export const VeterinariaForm: React.FC = () => {
       noValidate
     >
       <div className="flex items-center gap-3 pb-4 border-b border-[#DDE3EA]">
-        <div className="p-2.5 rounded-lg bg-[#1E8449]/10 text-[#1E8449]">
+        <div className="p-2.5 rounded-lg bg-[#237A3B]/10 text-[#237A3B]">
           <HeartPulse className="w-6 h-6" aria-hidden="true" />
         </div>
         <div>
-          <h3 className="font-display font-bold text-xl text-[#3B1E6D] hc-text">
+          <h3 className="font-display font-bold text-xl text-[#662D91] hc-text">
             Solicitud de Hora Veterinaria y Zoonosis
           </h3>
           <p className="text-sm text-[#4A5568] hc-muted">
@@ -678,10 +678,10 @@ export const VeterinariaForm: React.FC = () => {
         </label>
         <label
           htmlFor="vet-archivo"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg border border-dashed border-[#1E8449] bg-[#F4F6F9] hover:bg-[#EAF5EE] cursor-pointer transition-colors"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg border border-dashed border-[#237A3B] bg-[#F4F6F9] hover:bg-[#EAF5EE] cursor-pointer transition-colors"
         >
-          <FileUp className="w-5 h-5 text-[#1E8449] shrink-0" aria-hidden="true" />
-          <span className="text-sm font-medium text-[#3B1E6D]">
+          <FileUp className="w-5 h-5 text-[#237A3B] shrink-0" aria-hidden="true" />
+          <span className="text-sm font-medium text-[#662D91]">
             {archivo ? `Adjunto: ${archivo.name}` : 'Adjuntar cuenta de luz/agua o certificado de residencia'}
           </span>
           <input
@@ -698,7 +698,7 @@ export const VeterinariaForm: React.FC = () => {
       <div className="pt-2 flex justify-end">
         <button
           type="submit"
-          className="px-6 py-3 rounded-lg bg-[#1E8449] hover:bg-[#176B3A] text-white font-semibold text-base transition-colors cursor-pointer hc-btn-primary"
+          className="px-6 py-3 rounded-lg bg-[#237A3B] hover:bg-[#195F31] text-white font-semibold text-base transition-colors cursor-pointer hc-btn-primary"
         >
           Solicitar Hora Veterinaria
         </button>
@@ -735,14 +735,14 @@ export const LeyKarinForm: React.FC = () => {
   if (folio) {
     return (
       <div className="bg-white hc-card rounded-xl border border-[#DDE3EA] p-6 sm:p-8 space-y-4">
-        <div className="flex items-start gap-3 p-4 rounded-lg bg-[#3B1E6D]/8 border border-[#3B1E6D]/20">
-          <ShieldCheck className="w-6 h-6 text-[#3B1E6D] shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="flex items-start gap-3 p-4 rounded-lg bg-[#662D91]/8 border border-[#662D91]/20">
+          <ShieldCheck className="w-6 h-6 text-[#662D91] shrink-0 mt-0.5" aria-hidden="true" />
           <div>
-            <h3 className="font-display font-bold text-lg text-[#3B1E6D] hc-text">
+            <h3 className="font-display font-bold text-lg text-[#662D91] hc-text">
               Denuncia registrada bajo Protocolo Ley N° 21.643 (Ley Karin)
             </h3>
             <p className="text-[15px] text-[#4A5568] hc-muted mt-1">
-              Folio reservado: <strong className="font-mono-tabular text-[#3B1E6D]">{folio}</strong>. El Comité de Integridad y Contraloría Interna activará medidas de resguardo dentro de 3 días hábiles.
+              Folio reservado: <strong className="font-mono-tabular text-[#662D91]">{folio}</strong>. El Comité de Integridad y Contraloría Interna activará medidas de resguardo dentro de 3 días hábiles.
             </p>
           </div>
         </div>
@@ -752,7 +752,7 @@ export const LeyKarinForm: React.FC = () => {
             setFolio(null);
             setRelato('');
           }}
-          className="px-5 py-2.5 rounded-lg bg-[#3B1E6D] text-white font-semibold cursor-pointer"
+          className="px-5 py-2.5 rounded-lg bg-[#662D91] text-white font-semibold cursor-pointer"
         >
           Cerrar comprobante
         </button>
@@ -859,7 +859,7 @@ export const LeyKarinForm: React.FC = () => {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="px-6 py-3 rounded-lg bg-[#3B1E6D] hover:bg-[#2A1252] text-white font-semibold cursor-pointer hc-btn-primary"
+          className="px-6 py-3 rounded-lg bg-[#662D91] hover:bg-[#4A2068] text-white font-semibold cursor-pointer hc-btn-primary"
         >
           Enviar Denuncia Confidencial
         </button>
